@@ -30,6 +30,7 @@
         <java.version>17</java.version>
     </properties>
 
+    <!-- como las vistas de html se usara thymelead , tenemos que añadir aca en pomxml las dependencias y recargarlas en maven -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
