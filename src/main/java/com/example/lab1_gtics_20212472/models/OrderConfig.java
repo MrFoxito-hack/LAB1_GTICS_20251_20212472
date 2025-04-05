@@ -10,7 +10,7 @@ public class OrderConfig {
     private int cantidad;
     private List<String> opcionesAdicionales;
 
-    // Getter y Setter para nombreCliente
+    // Getter y Sette
     public String getNombreCliente() {
         return nombreCliente;
     }
@@ -28,7 +28,6 @@ public class OrderConfig {
         this.numeroMesa = numeroMesa;
     }
 
-    // Getter y Setter para productosSeleccionados
     public List<String> getProductosSeleccionados() {
         return productosSeleccionados;
     }
