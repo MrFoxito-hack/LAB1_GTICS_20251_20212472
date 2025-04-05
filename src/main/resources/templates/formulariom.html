@@ -9,8 +9,14 @@
 <body>
 <h2>Realiza tu pedido</h2>
 
+
+
+
+
+
 <!--  -->
 <!-- creamos un form con la estructura -->
+
 
 <form th:action="@{/procesar-pedido}" th:object="${pedido}" method="post">
 
@@ -36,6 +42,7 @@
     <label>Cantidad:</label>
     <input type="number" th:field="*{cantidad}" min="1" required><br><br>
 
+
     <!-- adicioanlm -->
     <label>Opciones adicionales:</label><br>
     <input type="checkbox" th:field="*{opcionesAdicionales}" value="Leche vegetal"> Leche vegetal<br>
@@ -44,6 +51,7 @@
 
     <!--CONFIRMAMOS PEDIDOO -->
     <button type="submit">Confirmar pedido :D</button>
+
 </form>
 </body>
 </html>

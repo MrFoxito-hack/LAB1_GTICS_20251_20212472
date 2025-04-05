@@ -24,6 +24,7 @@
 <ul>
     <li th:each="producto : ${resumenPedido.listaProductos}" th:text="${producto}"></li>
 </ul>
+
 </p>
 <p><strong>Tamaño:</strong> <span th:text="${resumenPedido.tamanio}"></span></p>
 <p><strong>Cantidad:</strong> <span th:text="${resumenPedido.cantidad}"></span></p>
@@ -31,6 +32,8 @@
 <ul>
     <li th:each="extra : ${resumenPedido.opcionesAdicionales}" th:text="${extra}"></li>
 </ul>
+
+
 </p>
 <p><strong>Total a pagar:</strong> S/ <span th:text="${resumenPedido.total}"></span></p>
 
@@ -44,6 +47,8 @@
 
 <form th:action="@{/enviar-calificacion}" th:object="${formularioCalificacion}" method="post">
     <label>Estrellas:</label>
+
+
     <!--  lo hacemos mas fiel a la vista mostrada del pdf -->
     <select th:field="*{estrellas}">
         <option value="1">⭐</option>
@@ -51,6 +56,8 @@
         <option value="3">⭐⭐⭐</option>
         <option value="4">⭐⭐⭐⭐</option>
         <option value="5">⭐⭐⭐⭐⭐</option>
+
+
     </select><br><br>
 
     <label>Comentario:</label><br>

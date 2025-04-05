@@ -2,6 +2,8 @@ package com.example.lab1_gtics_20212472.models;
 
 import java.util.List;
 
+//podemos ver los atributos de la clase OrdenCOnfig
+
 public class OrderSession {
     private String nombreCliente;
     private int numeroMesa;
@@ -10,6 +12,8 @@ public class OrderSession {
     private int cantidad;
     private List<String> opcionesAdicionales;
     private double total;
+
+
 
     public String getNombreCliente() {
         return nombreCliente;

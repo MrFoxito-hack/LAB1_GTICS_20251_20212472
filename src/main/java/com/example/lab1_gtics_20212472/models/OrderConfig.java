@@ -13,6 +13,7 @@ public class OrderConfig {
 
     //En spring existen 2 formas de recibir parametrosm en la url
 
+
     // Getter y Sette
     public String getNombreCliente() {
         return nombreCliente;

@@ -1,7 +1,9 @@
 package com.example.lab1_gtics_20212472.models;
 
 public class RatingForm {
+
     private int estrellas;
+
     private String comentario;
 
     public int getEstrellas() {
