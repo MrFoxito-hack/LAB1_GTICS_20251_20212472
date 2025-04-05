@@ -13,10 +13,11 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class PedidoController {
 
-    //no piden mapear rutas
+        //se coloca el objetoco model como atributo en el metrodo de ruta
     //usamos la forma reducidad los rewquestmapping, sabemos que para que peuda gesrionar una solicitud HTTP, se debe indicar la ruta web q identiifcara el controlador
     @GetMapping("/")
     public String mostrarFormularioPedido(Model model) {
+        //para enviar un valor a la vista se uso addatributte
         model.addAttribute("pedido", new OrderConfig());
         return "formulariom"; //no es necesario colocar el html
     }
@@ -35,6 +36,7 @@ public class PedidoController {
         resumen.setCantidad(pedido.getCantidad());
         resumen.setOpcionesAdicionales(pedido.getOpcionesAdicionales());
 
+        //definimos , podemos enciar parametros
         //colocamos de precios a nuestra eleccion (aqui podremos cambiarlo)
         double precioBase = 6.0;
 
@@ -52,6 +54,7 @@ public class PedidoController {
 
 
 
+
     @PostMapping("/enviar-calificacion")
 
     public String recibirCalificacion(@ModelAttribute("formularioCalificacion") RatingForm calificacion, Model model) {
@@ -59,3 +62,5 @@ public class PedidoController {
         return "graciasm"; //no es necesario colocar el html
     }
 }
+
+//http://localhost:8080/ para probrar uu (funciona)
