@@ -2,6 +2,8 @@ package com.example.lab1_gtics_20212472.models;
 
 import java.util.List;
 
+//podemos ver los atributos de la clase OrdenCOnfig
+
 public class OrderSession {
     private String nombreCliente;
     private int numeroMesa;
@@ -11,7 +13,8 @@ public class OrderSession {
     private List<String> opcionesAdicionales;
     private double total;
 
-    // Getter y Setter para nombreCliente
+
+
     public String getNombreCliente() {
         return nombreCliente;
     }
@@ -20,7 +23,6 @@ public class OrderSession {
         this.nombreCliente = nombreCliente;
     }
 
-    // Getter y Setter para numeroMesa
     public int getNumeroMesa() {
         return numeroMesa;
     }
@@ -29,7 +31,6 @@ public class OrderSession {
         this.numeroMesa = numeroMesa;
     }
 
-    // Getter y Setter para listaProductos
     public List<String> getListaProductos() {
         return listaProductos;
     }
@@ -38,7 +39,6 @@ public class OrderSession {
         this.listaProductos = listaProductos;
     }
 
-    // Getter y Setter para tamanio
     public String getTamanio() {
         return tamanio;
     }
@@ -56,7 +56,6 @@ public class OrderSession {
         this.cantidad = cantidad;
     }
 
-    // Getter y Setter para opcionesAdicionales
     public List<String> getOpcionesAdicionales() {
         return opcionesAdicionales;
     }
@@ -65,7 +64,6 @@ public class OrderSession {
         this.opcionesAdicionales = opcionesAdicionales;
     }
 
-    // Getter y Setter para total
     public double getTotal() {
         return total;
     }

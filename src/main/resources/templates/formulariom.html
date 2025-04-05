@@ -1,5 +1,7 @@
+<!-- primera vista  -->
+
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"> <!-- ya reloadeada las dependencias necesarias -->
 <head>
     <meta charset="UTF-8">
     <title>Formulario de Pedido</title>
@@ -7,19 +9,29 @@
 <body>
 <h2>Realiza tu pedido</h2>
 
+
+
+
+
+
+<!--  -->
+<!-- creamos un form con la estructura -->
+
+
 <form th:action="@{/procesar-pedido}" th:object="${pedido}" method="post">
 
     <label>Nombre del cliente:</label>
     <input type="text" th:field="*{nombreCliente}" required><br><br>
 
-    <label>Número de mesa:</label>
+    <label>Numero de mesa:</label>
     <input type="number" th:field="*{numeroMesa}" min="1" required><br><br>
 
-    <label>Selecciona productos:</label><br>
+    <label>PRODUCTOS:</label><br>
     <input type="checkbox" th:field="*{productosSeleccionados}" value="Café"> Café<br>
-    <input type="checkbox" th:field="*{productosSeleccionados}" value="Té"> Té<br>
-    <input type="checkbox" th:field="*{productosSeleccionados}" value="Postres"> Postres<br><br>
+    <input type="checkbox" th:field="*{productosSeleccionados}" value="Te"> Té<br>
+    <input type="checkbox" th:field="*{productosSeleccionados}" value="Postre"> Postres<br><br>
 
+    <!-- nos piden hacer un select  -->
     <label>Tamaño:</label>
     <select th:field="*{tamanio}">
         <option value="Pequeño">Pequeño</option>
@@ -30,12 +42,16 @@
     <label>Cantidad:</label>
     <input type="number" th:field="*{cantidad}" min="1" required><br><br>
 
+
+    <!-- adicioanlm -->
     <label>Opciones adicionales:</label><br>
     <input type="checkbox" th:field="*{opcionesAdicionales}" value="Leche vegetal"> Leche vegetal<br>
     <input type="checkbox" th:field="*{opcionesAdicionales}" value="Sin azúcar"> Sin azúcar<br>
     <input type="checkbox" th:field="*{opcionesAdicionales}" value="Toppings"> Toppings<br><br>
 
-    <button type="submit">Enviar pedido</button>
+    <!--CONFIRMAMOS PEDIDOO -->
+    <button type="submit">Confirmar pedido :D</button>
+
 </form>
 </body>
 </html>

@@ -2,6 +2,7 @@ package com.example.lab1_gtics_20212472.models;
 
 import java.util.List;
 
+//podemos ver los atributos de la clase OrdenCOnfig
 public class OrderConfig {
     private String nombreCliente;
     private int numeroMesa;
@@ -10,7 +11,10 @@ public class OrderConfig {
     private int cantidad;
     private List<String> opcionesAdicionales;
 
-    // Getter y Setter para nombreCliente
+    //En spring existen 2 formas de recibir parametrosm en la url
+
+
+    // Getter y Sette
     public String getNombreCliente() {
         return nombreCliente;
     }
@@ -28,7 +32,6 @@ public class OrderConfig {
         this.numeroMesa = numeroMesa;
     }
 
-    // Getter y Setter para productosSeleccionados
     public List<String> getProductosSeleccionados() {
         return productosSeleccionados;
     }

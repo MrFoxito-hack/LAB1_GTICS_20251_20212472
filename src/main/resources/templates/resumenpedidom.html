@@ -1,10 +1,21 @@
+
+<!-- Nos piden hacer 2 en la misma vista -->
+
+
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"> <!-- ya reloadeada las dependencias necesarias -->
 <head>
     <meta charset="UTF-8">
+
+
+    <!-- colocamos de titulo de bista resumen de pedido -->
     <title>Resumen del Pedido</title>
 </head>
 <body>
+
+
+
+<!-- formulario de peddo con opciones de personalizacion -->
 <h2>Resumen de tu pedido</h2>
 
 <p><strong>Cliente:</strong> <span th:text="${resumenPedido.nombreCliente}"></span></p>
@@ -13,6 +24,7 @@
 <ul>
     <li th:each="producto : ${resumenPedido.listaProductos}" th:text="${producto}"></li>
 </ul>
+
 </p>
 <p><strong>Tamaño:</strong> <span th:text="${resumenPedido.tamanio}"></span></p>
 <p><strong>Cantidad:</strong> <span th:text="${resumenPedido.cantidad}"></span></p>
@@ -20,27 +32,38 @@
 <ul>
     <li th:each="extra : ${resumenPedido.opcionesAdicionales}" th:text="${extra}"></li>
 </ul>
+
+
 </p>
 <p><strong>Total a pagar:</strong> S/ <span th:text="${resumenPedido.total}"></span></p>
 
 <hr>
 
+
+
+
+<!--  formulario para calificar la experiencia-->
 <h3>Califica tu experiencia</h3>
 
 <form th:action="@{/enviar-calificacion}" th:object="${formularioCalificacion}" method="post">
     <label>Estrellas:</label>
+
+
+    <!--  lo hacemos mas fiel a la vista mostrada del pdf -->
     <select th:field="*{estrellas}">
         <option value="1">⭐</option>
         <option value="2">⭐⭐</option>
         <option value="3">⭐⭐⭐</option>
         <option value="4">⭐⭐⭐⭐</option>
         <option value="5">⭐⭐⭐⭐⭐</option>
+
+
     </select><br><br>
 
-    <label>Comentario (opcional):</label><br>
+    <label>Comentario:</label><br>
     <textarea th:field="*{comentario}" rows="4" cols="50"></textarea><br><br>
 
-    <button type="submit">Enviar calificación</button>
+    <button type="submit">Enviar calificacion</button>
 </form>
 </body>
 </html>
